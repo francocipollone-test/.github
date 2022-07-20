@@ -1,0 +1,21 @@
+name: Reusable Triage
+
+on:
+  workflow_call:
+    inputs:
+      number_of_project:
+        required: true
+        type: string
+    secrets:
+      github-token:
+        required: true
+
+jobs:
+  add-to-project:
+    name: Add issue/PR to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.1
+        with:
+          project-url: https://github.com/orgs/maliput/projects/${{ inputs.number_of_project }}
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
