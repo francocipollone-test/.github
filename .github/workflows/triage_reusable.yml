@@ -15,7 +15,7 @@ jobs:
     name: Add issue/PR to project
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v0.1
+      - uses: actions/add-to-project@v0.1.0
         with:
           project-url: https://github.com/orgs/maliput/projects/${{ inputs.number_of_project }}
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
