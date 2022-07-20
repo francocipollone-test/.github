@@ -17,5 +17,5 @@ jobs:
     steps:
       - uses: actions/add-to-project@v0.1.0
         with:
-          project-url: https://github.com/orgs/maliput/projects/${{ inputs.number_of_project }}
+          project-url: https://github.com/orgs/francocipollone-test/projects/${{ inputs.number_of_project }}
           github-token: ${{ secrets.github-token }}
